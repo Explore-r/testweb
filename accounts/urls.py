@@ -1,13 +1,13 @@
 from django.urls import path
-from .import views
+# from .import views
 from accounts.views import *
-app_name ='accounts'
+# app_name ='accounts'
 
 urlpatterns = [
 
-    # path('home/',views.home),
-    # path('products/',views.products),
-    # path('customer/',views.customer),
-    # path('login/',views.login),
-    # path('register/',views.register),
+    path('home/',home),
+    path('products/',products),
+    path('customer/',customer),
+    path('login/',login),
+    path('register/',register),
 ]
