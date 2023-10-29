@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from .import views
+# from accounts.import views
+from accounts.views import *
+# 
+
+app_name ='accounts'
 
 
 
@@ -24,16 +28,6 @@ from .import views
 
 urlpatterns = [
     path('', admin.site.urls),
-    # path('',include('accounts.urls'))
-    # path('home/',include('accounts.urls')),
-    # path('products/',include('accounts.urls')),
-    # path('customer/',include('accounts.urls')),
-    # path('login/',include('accounts.urls')),
-
-    # path('register/',include('accounts.urls')),
-    path('home/',views.home),
-    path('products/',views.products),
-    path('customer/',views.customer),
-    path('login/',views.login),
-    path('register/',views.register),
+    path('accounts/',include('accounts.urls')),
+    
 ]
